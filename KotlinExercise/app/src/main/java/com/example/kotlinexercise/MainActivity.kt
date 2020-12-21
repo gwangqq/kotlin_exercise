@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             Log.d("Lotto", "You lose the lottery")
         }
-
+        // how to use function "when"
         var num = 10
         when(num){
             8 -> {
@@ -41,6 +41,51 @@ class MainActivity : AppCompatActivity() {
                 Log.d("when", "num is 10")
             }
         }
+
+        when(num){
+            in 2..9 -> {
+                Log.d("when", "num is not between 2 and 9")
+            }
+            in 10..20 ->{
+                Log.d("when", "num is between 10 and 20")
+            }
+        }
+
+        when{
+            num == 8 ->{
+                Log.d("when", "num is 8")
+            }
+            num == 9 ->{
+                Log.d("when", "num is 9")
+            }
+            num == 10 ->{
+                Log.d("when", "num is 10")
+            }
+        }
+
+        // how to use array
+        var stringArray = Array(10, {item -> ""})
+        var dayArray = arrayOf("mon", "tue", "wed", "thu", "fri", "fri", "sat", "sun")
+        var intArray = IntArray(10)
+        intArray[0] = 100
+        intArray[1] = 101
+        intArray[2] = 102
+        intArray[3] = 103
+        intArray[4] = 104
+
+        intArray.set(5,105)
+        intArray.set(6,106)
+        intArray.set(7,107)
+        intArray.set(8,108)
+        intArray.set(9,109)
+
+        var numArray = intArray[7]
+        Log.d("numArray ::: ", "The number of intArray[7] is $numArray")
+
+        var numArray2 = intArray[8]
+        Log.d("numArray :::", "The number of intArray[8] is $numArray2")
+
+
 
     }
 }
