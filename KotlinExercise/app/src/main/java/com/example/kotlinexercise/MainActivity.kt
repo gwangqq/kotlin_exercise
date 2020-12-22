@@ -1,6 +1,5 @@
 package com.example.kotlinexercise
 
-import android.graphics.LinearGradient
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,9 +9,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // practice variables
+        var kotlin = KotlinOne("BANANA")
 
-        var myName = "jake"
+        var kotlin2 = KotlinTwo("APPLE")
+        KotlinThree.one = "Jake Test"
+        KotlinThree.printOne()
+
+        data class UserData(var name: String, var age: Int)
+        var userData = UserData("Jake", 28)
+        Log.d("class", "example of data class in kotlin ::: ${userData}")
+
+        var newData = userData.copy()
+        Log.d("class", "this is copied kotlin data class ::: ${newData}")
+//--------------------------------------------------
+        // practice variables
+       /* var myName = "jake"
         var myName2: String
         var myName3: String
         myName2 = "gwanggyu"
@@ -138,6 +149,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         testFunction("gwanggyu", 28, 68.4)
+*/
+
     }
 
 }
